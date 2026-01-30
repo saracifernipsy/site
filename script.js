@@ -228,3 +228,42 @@
     });
   });
 })();
+
+(() => {
+  const toggles = document.querySelectorAll('.service-toggle');
+  if (!toggles.length) {
+    return;
+  }
+
+  const closeOthers = (current) => {
+    toggles.forEach((toggle) => {
+      if (toggle !== current) {
+        toggle.removeAttribute('open');
+        const content = toggle.querySelector('.accordion-content');
+        if (content) {
+          content.style.maxHeight = '0px';
+        }
+      }
+    });
+  };
+
+  toggles.forEach((toggle) => {
+    const content = toggle.querySelector('.accordion-content');
+    if (!content) {
+      return;
+    }
+
+    if (toggle.hasAttribute('open')) {
+      content.style.maxHeight = `${content.scrollHeight + 40}px`;
+    }
+
+    toggle.addEventListener('toggle', () => {
+      if (toggle.open) {
+        closeOthers(toggle);
+        content.style.maxHeight = `${content.scrollHeight + 40}px`;
+      } else {
+        content.style.maxHeight = '0px';
+      }
+    });
+  });
+})();

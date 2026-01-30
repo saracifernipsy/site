@@ -455,6 +455,66 @@ a {
   box-shadow: 0 18px 35px rgba(30, 27, 22, 0.14);
 }
 
+.service-accordion {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.service-toggle {
+  border: 1px solid rgba(124, 147, 140, 0.14);
+  border-radius: var(--radius-md);
+  background: var(--cream);
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(30, 27, 22, 0.12);
+}
+
+.service-toggle summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 18px;
+  font-weight: 600;
+  color: var(--sage-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-toggle summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.service-toggle[open] summary::after {
+  content: "-";
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+
+.service-toggle[open] .accordion-content {
+  padding-bottom: 16px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .studio-image img {
   width: 100%;
   border-radius: var(--radius-lg);
