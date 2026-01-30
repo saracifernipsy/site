@@ -33,7 +33,7 @@
       <div class="brand">
         <span class="brand-mark">S</span>
         <div>
-          <p class="brand-name">Dott.ssa Sara Ciferni</p>
+          <p class="brand-name" data-text="name">Dott.ssa Sara Ciferni</p>
           <p class="brand-role">Psicologa</p>
         </div>
       </div>
@@ -43,7 +43,7 @@
         <a href="#studio">Lo studio</a>
         <a href="#contatti">Contatti</a>
       </nav>
-      <a class="button button-primary" href="mailto:saraciferni@gmail.com?subject=Richiesta%20colloquio">Prenota un colloquio</a>
+      <a class="button button-primary" data-mailto href="mailto:saraciferni@gmail.com?subject=Richiesta%20colloquio">Prenota un colloquio</a>
     </div>
   </header>
 
@@ -58,8 +58,8 @@
           <h1>Uno spazio sicuro per ascolto, chiarezza e cambiamento.</h1>
           <p class="lead">Inizio la mia attività professionale con un approccio centrato sulla persona, per accompagnarti in percorsi personalizzati di crescita e benessere.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://wa.me/393926467330">Scrivimi ora</a>
-            <a class="button button-ghost" href="tel:+393926467330">Chiama: +39 392 646 7330</a>
+            <a class="button button-primary" data-whatsapp href="https://wa.me/393926467330">Scrivimi ora</a>
+            <a class="button button-ghost" data-phone-link href="tel:+393926467330">Chiama: +39 392 646 7330</a>
           </div>
           <div class="hero-badges">
             <span>Colloqui in presenza e online</span>
@@ -69,7 +69,7 @@
           <div class="hero-details">
             <div>
               <p class="detail-title">Studio</p>
-              <p>Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)</p>
+              <p data-address>Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)</p>
             </div>
             <div>
               <p class="detail-title">Modalita</p>
@@ -88,7 +88,7 @@
           <div class="card-body">
             <p class="card-title">Primo colloquio conoscitivo</p>
             <p class="card-text">Un incontro per conoscerci e capire insieme il percorso piu adatto alle tue esigenze.</p>
-            <a class="button button-secondary" href="mailto:saraciferni@gmail.com?subject=Richiesta%20colloquio">Prenota un incontro</a>
+            <a class="button button-secondary" data-mailto href="mailto:saraciferni@gmail.com?subject=Richiesta%20colloquio">Prenota un incontro</a>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@
           <div class="studio-details">
             <div>
               <p class="detail-title">Dove</p>
-              <p>Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)</p>
+              <p data-address>Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)</p>
             </div>
             <div>
               <p class="detail-title">Accesso</p>
@@ -163,10 +163,10 @@
             </div>
           </div>
           <div class="map-card">
-            <a class="map-link" href="https://maps.google.com/?q=Galleria+Europa+2,+C.so+Umberto+I,+134,+65015+Montesilvano+PE" target="_blank" rel="noopener">
+            <a class="map-link" data-map-link href="https://maps.google.com/?q=Galleria+Europa+2,+C.so+Umberto+I,+134,+65015+Montesilvano+PE" target="_blank" rel="noopener">
               <img class="image-reveal" src="mappa.png" alt="Mappa della sede di studio a Montesilvano" loading="lazy" />
             </a>
-            <a class="button button-ghost" href="https://maps.google.com/?q=Galleria+Europa+2,+C.so+Umberto+I,+134,+65015+Montesilvano+PE" target="_blank" rel="noopener">Apri in Google Maps</a>
+            <a class="button button-ghost" data-map-link href="https://maps.google.com/?q=Galleria+Europa+2,+C.so+Umberto+I,+134,+65015+Montesilvano+PE" target="_blank" rel="noopener">Apri in Google Maps</a>
           </div>
         </div>
       </div>
@@ -182,15 +182,15 @@
           <div class="contact-list">
             <div>
               <p class="detail-title">Email</p>
-              <a href="mailto:saraciferni@gmail.com?subject=Richiesta%20colloquio">saraciferni@gmail.com</a>
+              <a data-email-text data-mailto href="mailto:saraciferni@gmail.com?subject=Richiesta%20colloquio">saraciferni@gmail.com</a>
             </div>
             <div>
               <p class="detail-title">Telefono</p>
-              <a href="tel:+393926467330">+39 392 646 7330</a>
+              <a data-phone-text href="tel:+393926467330">+39 392 646 7330</a>
             </div>
             <div>
               <p class="detail-title">Indirizzo studio</p>
-              <p>Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)</p>
+              <p data-address>Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)</p>
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div>
-        <p class="brand-name">Dott.ssa Sara Ciferni</p>
+        <p class="brand-name" data-text="name">Dott.ssa Sara Ciferni</p>
         <p class="brand-role">Psicologa - Colloqui in presenza e online</p>
       </div>
       <div>
@@ -246,10 +246,10 @@
       </div>
       <div>
         <p class="detail-title">Contatti</p>
-        <p>saraciferni@gmail.com | +39 392 646 7330</p>
+        <p><span data-email-text>saraciferni@gmail.com</span> | <span data-phone-text>+39 392 646 7330</span></p>
       </div>
     </div>
-    <p class="footer-privacy">
+    <p class="footer-privacy" data-privacy>
       Informativa privacy (sintesi): nessun cookie o tracking. I dati del modulo (nome, contatto, disponibilita e messaggio facoltativo) servono solo per ricontattarti.
       Evita di inserire informazioni cliniche o dati sensibili. Titolare: Dott.ssa Sara Ciferni, Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE), saraciferni@gmail.com.
     </p>

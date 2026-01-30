@@ -1,4 +1,79 @@
 (() => {
+  const siteData = {
+    name: 'Dott.ssa Sara Ciferni',
+    email: 'saraciferni@gmail.com',
+    emailSubject: 'Richiesta colloquio',
+    phoneDisplay: '+39 392 646 7330',
+    phoneE164: '+393926467330',
+    whatsappLink: 'https://wa.me/393926467330',
+    address: 'Galleria Europa 2, C.so Umberto I, 134, Montesilvano (PE)',
+    mapLink: 'https://maps.google.com/?q=Galleria+Europa+2,+C.so+Umberto+I,+134,+65015+Montesilvano+PE',
+  };
+
+  const mailtoHref = (subject) =>
+    `mailto:${encodeURIComponent(siteData.email)}?subject=${encodeURIComponent(subject || siteData.emailSubject)}`;
+
+  document.querySelectorAll('[data-text="name"]').forEach((el) => {
+    el.textContent = siteData.name;
+  });
+
+  document.querySelectorAll('[data-address]').forEach((el) => {
+    el.textContent = siteData.address;
+  });
+
+  document.querySelectorAll('[data-mailto]').forEach((el) => {
+    el.setAttribute('href', mailtoHref(el.getAttribute('data-subject')));
+  });
+
+  document.querySelectorAll('[data-email-text]').forEach((el) => {
+    el.textContent = siteData.email;
+    if (el.tagName === 'A') {
+      el.setAttribute('href', mailtoHref(el.getAttribute('data-subject')));
+    }
+  });
+
+  document.querySelectorAll('[data-phone-text]').forEach((el) => {
+    el.textContent = siteData.phoneDisplay;
+    if (el.tagName === 'A') {
+      el.setAttribute('href', `tel:${siteData.phoneE164}`);
+    }
+  });
+
+  document.querySelectorAll('[data-phone-link]').forEach((el) => {
+    el.setAttribute('href', `tel:${siteData.phoneE164}`);
+  });
+
+  document.querySelectorAll('[data-whatsapp]').forEach((el) => {
+    el.setAttribute('href', siteData.whatsappLink);
+  });
+
+  document.querySelectorAll('[data-map-link]').forEach((el) => {
+    el.setAttribute('href', siteData.mapLink);
+  });
+
+  const privacy = document.querySelector('[data-privacy]');
+  if (privacy) {
+    privacy.textContent =
+      'Informativa privacy (sintesi): nessun cookie o tracking. I dati del modulo (nome, contatto, disponibilita e messaggio facoltativo) ' +
+      'servono solo per ricontattarti. Evita di inserire informazioni cliniche o dati sensibili. ' +
+      `Titolare: ${siteData.name}, ${siteData.address}, ${siteData.email}.`;
+  }
+
+  const form = document.querySelector('#contact-form');
+  if (form) {
+    form.setAttribute('data-email', siteData.email);
+    form.setAttribute('data-subject', siteData.emailSubject);
+    const phoneInput = form.querySelector('input[name=\"Telefono\"]');
+    if (phoneInput) {
+      phoneInput.setAttribute('placeholder', siteData.phoneDisplay);
+    }
+  }
+
+  const copyButton = document.querySelector('.copy-email');
+  if (copyButton) {
+    copyButton.setAttribute('data-email', siteData.email);
+  }
+
   const reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
     reveals.forEach((el) => el.classList.add('is-visible'));
