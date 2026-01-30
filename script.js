@@ -32,12 +32,20 @@
   const getFormData = () => {
     const email = form.getAttribute('data-email') || 'saraciferni@gmail.com';
     const subject = form.getAttribute('data-subject') || 'Richiesta colloquio';
+    const getValue = (selector) => {
+      const input = form.querySelector(selector);
+      if (!input || typeof input.value !== 'string') {
+        return '';
+      }
+      return input.value.trim();
+    };
+
     const fields = {
-      Nome: form.querySelector('[name="Nome"]')?.value.trim(),
-      Email: form.querySelector('[name="Email"]')?.value.trim(),
-      Telefono: form.querySelector('[name="Telefono"]')?.value.trim(),
-      Disponibilita: form.querySelector('[name="Disponibilita"]')?.value.trim(),
-      Messaggio: form.querySelector('[name="Messaggio"]')?.value.trim(),
+      Nome: getValue('[name="Nome"]'),
+      Email: getValue('[name="Email"]'),
+      Telefono: getValue('[name="Telefono"]'),
+      Disponibilita: getValue('[name="Disponibilita"]'),
+      Messaggio: getValue('[name="Messaggio"]'),
     };
 
     const bodyLines = Object.entries(fields)
@@ -118,5 +126,30 @@
       copyButton.textContent = defaultLabel;
       copyButton.removeAttribute('disabled');
     }, 2000);
+  });
+})();
+
+(() => {
+  const topBar = document.querySelector('.top-bar');
+  const toggle = document.querySelector('.menu-toggle');
+  const topMenu = document.querySelector('.top-menu');
+  if (!topBar || !toggle || !topMenu) {
+    return;
+  }
+
+  const closeMenu = () => {
+    topBar.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = topBar.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  document.querySelectorAll('.top-menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
   });
 })();
