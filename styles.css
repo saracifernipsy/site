@@ -385,6 +385,17 @@ a {
   gap: 14px;
 }
 
+.hero-details,
+.studio-details,
+.contact-list,
+.map-card,
+.info-card,
+.service-card,
+.contact-card,
+.hero-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -481,6 +492,30 @@ a {
   display: block;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .hero-card img,
+  .studio-image img,
+  .map-card img {
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+
+  .hero-card:hover img,
+  .studio-image:hover img,
+  .map-link:hover img {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 28px 70px rgba(34, 30, 40, 0.16);
+  }
+
+  .info-card:hover,
+  .service-card:hover,
+  .contact-card:hover,
+  .hero-details:hover,
+  .studio-details:hover,
+  .contact-list:hover {
+    transform: translateY(-3px);
+  }
+}
+
 .contact {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -502,6 +537,26 @@ a {
   display: grid;
   gap: 16px;
   border: 1px solid rgba(124, 147, 140, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card,
+.hero-card,
+.studio-image,
+.map-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover,
+.hero-card:hover,
+.contact-card:hover,
+.studio-image:hover,
+.map-card:hover,
+.hero-details:hover,
+.studio-details:hover,
+.contact-list:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(30, 27, 22, 0.14);
 }
 
 label {
@@ -611,21 +666,12 @@ textarea:focus {
 .image-reveal {
   transform: translateX(28px);
   opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .reveal.is-visible .image-reveal {
-  animation: imageSlideIn 0.9s ease both;
-}
-
-@keyframes imageSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(28px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 1024px) {
