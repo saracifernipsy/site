@@ -1,7 +1,7 @@
 (() => {
   const siteData = {
     name: 'Dott.ssa Sara Ciferni',
-    email: 'saraciferni@gmail.com',
+    email: 'saraciferni.psy@gmail.com',
     emailSubject: 'Richiesta colloquio',
     phoneDisplay: '+39 392 646 7330',
     phoneE164: '+393926467330',
@@ -105,7 +105,7 @@
   }
 
   const getFormData = () => {
-    const email = form.getAttribute('data-email') || 'saraciferni@gmail.com';
+    const email = form.getAttribute('data-email') || 'saraciferni.psy@gmail.com';
     const subject = form.getAttribute('data-subject') || 'Richiesta colloquio';
     const getValue = (selector) => {
       const input = form.querySelector(selector);
