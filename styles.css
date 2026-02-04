@@ -453,6 +453,31 @@ a {
   margin-top: 14px;
 }
 
+.bio-card {
+  background: var(--cream);
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(124, 147, 140, 0.14);
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.bio-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.bio-quote {
+  font-size: 1.05rem;
+  color: var(--sage-dark);
+  text-align: center;
+}
+
 .info-card {
   background: var(--cream);
   padding: 30px;
