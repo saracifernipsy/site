@@ -286,7 +286,26 @@ a {
 }
 
 .hero {
-  padding: 88px 0 64px;
+  position: relative;
+  min-height: 92vh;
+  padding: 120px 0 80px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("studio.jpg") center / cover no-repeat;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(250, 247, 244, 0.88), rgba(250, 247, 244, 0.55));
+  z-index: 0;
 }
 
 .hero-grid {
@@ -294,6 +313,16 @@ a {
   grid-template-columns: 1.1fr 0.9fr;
   gap: 50px;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  background: rgba(250, 247, 244, 0.92);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(124, 147, 140, 0.16);
 }
 
 .hero-quote {
@@ -329,6 +358,10 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 22px;
+}
+
+.hero-badges:empty {
+  display: none;
 }
 
 .hero-badges span {
@@ -401,6 +434,23 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 36px;
   align-items: center;
+}
+
+#chi-sono .container.split {
+  align-items: stretch;
+}
+
+#chi-sono .container.split > div {
+  text-align: justify;
+  text-align-last: center;
+}
+
+#chi-sono h2 {
+  text-align: center;
+}
+
+#chi-sono p + p {
+  margin-top: 14px;
 }
 
 .info-card {
@@ -573,6 +623,12 @@ a {
   .studio-details:hover,
   .contact-list:hover {
     transform: translateY(-3px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg {
+    background-attachment: fixed;
   }
 }
 
