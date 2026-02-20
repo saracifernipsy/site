@@ -460,15 +460,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("studio.jpg") center / cover no-repeat fixed;
-  z-index: 0;
-}
-
-#chi-sono::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(118deg, rgba(248, 245, 241, 0.9), rgba(248, 245, 241, 0.76));
+  background: url("immagine3.jpg") center / cover no-repeat fixed;
   z-index: 0;
 }
 
@@ -931,6 +923,14 @@ textarea:focus {
 @media (max-width: 1024px) {
   #chi-sono::before {
     background-attachment: scroll;
+  }
+
+  #studio .container.split {
+    grid-template-columns: 1fr;
+  }
+
+  #studio .map-card {
+    margin-top: 18px;
   }
 
   .header-content {
