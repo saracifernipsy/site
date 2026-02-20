@@ -444,6 +444,32 @@ a {
   align-items: center;
 }
 
+#chi-sono {
+  position: relative;
+  overflow: hidden;
+}
+
+#chi-sono::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("studio.jpg") center / cover no-repeat fixed;
+  z-index: 0;
+}
+
+#chi-sono::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(118deg, rgba(248, 245, 241, 0.9), rgba(248, 245, 241, 0.76));
+  z-index: 0;
+}
+
+#chi-sono .container {
+  position: relative;
+  z-index: 1;
+}
+
 #chi-sono .container.split {
   align-items: stretch;
 }
@@ -473,17 +499,28 @@ a {
 }
 
 .bio-card img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   border-radius: var(--radius-md);
   display: block;
+  margin: 0 auto;
 }
 
 .bio-quote {
   font-size: 1.05rem;
   color: var(--sage-dark);
   text-align: center;
+}
+
+.contact-end-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contact-end-actions .button {
+  width: 100%;
 }
 
 .info-card {
@@ -869,6 +906,10 @@ textarea:focus {
 }
 
 @media (max-width: 1024px) {
+  #chi-sono::before {
+    background-attachment: scroll;
+  }
+
   .header-content {
     grid-template-columns: auto auto;
   }
