@@ -6,8 +6,8 @@
     phoneDisplay: '+39 392 646 7330',
     phoneE164: '+393926467330',
     whatsappLink: 'https://wa.me/393926467330',
-    address: 'Galleria Europa 2, C.so Umberto I, 130, Montesilvano (PE)',
-    mapLink: 'https://maps.google.com/?q=Galleria+Europa+2,+C.so+Umberto+I,+130,+65015+Montesilvano+PE',
+    address: 'C.so Umberto I, 130, Montesilvano (PE)',
+    mapLink: 'https://maps.google.com/?q=C.so+Umberto+I,+130,+65015+Montesilvano+PE',
   };
 
   const mailtoHref = (subject) =>
