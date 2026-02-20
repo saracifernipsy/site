@@ -634,6 +634,31 @@ a {
   gap: 12px;
 }
 
+#studio .container.split {
+  grid-template-columns: 1fr;
+  justify-items: stretch;
+}
+
+#studio .container.split > .reveal {
+  width: 100%;
+  max-width: 100%;
+  text-align: left;
+}
+
+#studio .studio-details {
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#studio .map-card {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .map-link {
   display: block;
   border-radius: var(--radius-md);
@@ -870,6 +895,7 @@ textarea:focus {
   .studio-details {
     grid-template-columns: 1fr;
   }
+
 }
 
 @media (max-width: 640px) {
