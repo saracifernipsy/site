@@ -326,11 +326,19 @@ a {
 }
 
 .hero-quote {
-  font-size: 1.05rem;
+  font-size: 1.22rem;
   color: var(--sage-dark);
   padding-left: 16px;
   border-left: 2px solid rgba(124, 147, 140, 0.45);
   margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.hero-quote em {
+  font-family: "Baskerville", "Palatino Linotype", "Book Antiqua", "Garamond", serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
 .eyebrow {
