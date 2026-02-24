@@ -7,7 +7,7 @@
     phoneE164: '+393926467330',
     whatsappLink: 'https://wa.me/393926467330',
     address: 'C.so Umberto I, 130, Montesilvano (PE)',
-    mapLink: 'https://maps.google.com/?q=C.so+Umberto+I,+130,+65015+Montesilvano+PE',
+    mapLink: 'https://www.google.com/maps/place/Dott.ssa+Sara+Ciferni+Psicologa/@42.514221,14.1525605,17z/data=!3m1!4b1!4m6!3m5!1s0x1331a553d1e77749:0xefb00b19a5a3ac43!8m2!3d42.514221!4d14.1525605!16s%2Fg%2F11n4mc0jhq',
   };
 
   const mailtoHref = (subject) =>
