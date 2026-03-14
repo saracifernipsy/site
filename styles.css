@@ -267,15 +267,16 @@ a {
 }
 
 .brand-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
-  color: var(--cream);
-  display: grid;
-  place-items: center;
-  font-weight: 600;
-  font-size: 1.05rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 12px 28px rgba(34, 30, 40, 0.12);
+  border: 1px solid rgba(124, 147, 140, 0.18);
+  background: var(--cream);
+  flex: 0 0 auto;
 }
 
 .brand-name {
